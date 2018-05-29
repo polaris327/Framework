@@ -15,9 +15,9 @@
         <div class="nav-menu">
           <img class="logo-image" src="assets/Symbol@2x.png" alt="main_logo">
           <ul>
-            <li><span id="signup">SIGN UP</span></li>
-            <li><span id="our-approach">OUR APPROACH</span></li>
-            <li><span id="our-team">OUR TEAM</span></li>
+            <li><a id="signup" class="menu-item">SIGN UP</a></li>
+            <li><a id="our-approach" class="menu-item">OUR APPROACH</a></li>
+            <li><a id="our-team" class="menu-item">OUR TEAM</a></li>
           </ul>
         </div>
         <div class="contact-us">
@@ -26,7 +26,7 @@
       </div>
       <div class="main-container">
         <div class="landing-page">
-          <video width="320" height="240" autoplay>
+          <video width="320" height="240" autoplay loop>
             <source src="assets/FrameWork Hero.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video>
@@ -38,7 +38,12 @@
           </div>
 
           <div id="menu_icon" class="mobile-menu-icon">
-            <i class="fa fa-bars"></i>
+            <!-- <i class="fa fa-bars"></i> -->
+            <div class="lines">
+              <div class="long-line"></div>
+              <div class="long-line"></div>
+              <div class="half-line"></div>
+            </div>
           </div>
           <ul id="mobile-menu" class="mobile-menu">
             <li id="signup-mobile" >SIGN UP</li>
@@ -310,8 +315,10 @@
       $("#menu_icon").click(function() {
         if ($("#mobile-menu").css('display') === 'none') {
           $("#mobile-menu").css('display', 'block');
+          $("#menu_icon").addClass('opened');
         } else {
           $("#mobile-menu").css('display', 'none');
+          $("#menu_icon").removeClass('opened');
         }
       });
 
@@ -319,7 +326,39 @@
         // Scroll
         $('html,body').animate({ scrollTop: $("#"+id).offset().top}, 'slow');
         $("#mobile-menu").css('display', 'none');
+        $("#menu_icon").removeClass('opened');
       }
+
+      // var clickableIds = [
+      //   'our-approach',
+      //   'signup-item',
+      //   'home-item',
+      //   'our-approach-mobile',
+      //   'signup',
+      //   'signup-mobile',
+      //   'our-team',
+      //   'our-team-mobile'
+      // ];
+
+      // var scrollToSections = [
+      //   'our-approach-section',
+      //   'owner-signup',
+      //   'container',
+      //   'our-approach-mobile-section',
+      //   'owner-signup',
+      //   'owner-signup',
+      //   'our-team-section',
+      //   'our-team-section'
+      // ];
+
+      // for (var i=0; i < clickableIds.length; i ++) {
+      //   // console.log(clickableIds[i]);
+      //   $('#' + clickableIds[i]).click(function() {
+      //     console.log(scrollToSections[i]);
+      //     console.log(i);
+      //     goToByScroll(scrollToSections[i]);
+      //   });
+      // }
 
       $("#our-approach").click(function() {
         goToByScroll("our-approach-section");
@@ -352,6 +391,16 @@
       $("#our-team-mobile").click(function() {
         goToByScroll("our-team-section");
       });
+
+      // $(".menu-item").click(function(e) {
+      //   for(object in $(".menu-item")) {
+      //     console.log('object: ', object);
+      //     $(`#${object.id}`).css('opacity', 0.4);
+      //   }
+        // $(this).css('opacity', 1);
+        // console.log('sign up: ', e.target.id);
+        // $(`#${e.target.id}`).css('opacity', 1);
+      // });
     </script>
   </body>
 </html>
