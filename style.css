@@ -1,8 +1,53 @@
 @font-face {
   font-family: CapitoliumNews2;
-  src: url('assets/CapitoliumNews2/Regular.otf');
+  src: url('assets/fonts/CapitoliumNews2/Regular.otf');
   font-style: normal;
   font-weight: 400;
+}
+
+/* Proximanova font */
+@font-face {
+  font-family: 'proxima_novamedium';
+  src: url('assets/fonts/proximanova/proximanova-medium.otf') format('otf'),
+       url('assets/fonts/proximanova/proximanova-medium-webfont.woff2') format('woff2'),
+       url('assets/fonts/proximanova/proximanova-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novaregular';
+  src: url('assets/fonts/proximanova/proximanova-regular.otf') format('otf'),
+       url('assets/fonts/proximanova/proximanova-regular-webfont.woff2') format('woff2'),
+       url('assets/fonts/proximanova/proximanova-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima_novasemibold';
+  src: url('assets/fonts/proximanova/proximanova-semibold.otf') format('otf'),
+       url('assets/fonts/proximanova/proximanova-semibold-webfont.woff2') format('woff2'),
+       url('assets/fonts/proximanova/proximanova-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novabold';
+  src: url('assets/fonts/proximanova/proximanova-bold.otf') format('otf'),
+       url('assets/fonts/proximanova/proximanova-bold-webfont.woff2') format('woff2'),
+       url('assets/fonts/proximanova/proximanova-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novalight';
+  src: url('assets/fonts/proximanova/proximanova-light-webfont.ttf'),
+       url('assets/fonts/proximanova/proximanova-light-webfont.svg') format('svg'),
+       url('assets/fonts/proximanova/proximanova-light-webfont.woff.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -89,6 +134,7 @@ button i {
 
 .main-menu .contact-us .text {
   transform: rotate(-90deg);
+  font-family: proxima_novasemibold;
   font-size: 14px;
   font-weight: 600;
   font-style: normal;
@@ -110,7 +156,7 @@ button i {
 .main-menu .nav-menu ul li a {
   transform: rotate(-90deg);
   opacity: 0.4;
-  font-family: ProximaNova;
+  font-family: proxima_novasemibold;
   font-size: 14px;
   font-weight: 600;
   font-style: normal;
@@ -170,8 +216,8 @@ button i {
 
 .landing-page .main-logo {
   text-align: center;
-  width: 453px;
-  height: 30px;
+  width: 253px;
+  height: 20px;
   top: 80px !important;
   position: absolute;
   z-index: 2;
@@ -190,7 +236,7 @@ button i {
   font-style: normal;
   font-stretch: normal;
   line-height: 1.38;
-  letter-spacing: -0.6px;
+  letter-spacing: 0.6px;
   color: #ffffff;
   position: relative;
   z-index: 2;
@@ -198,7 +244,8 @@ button i {
 
 .landing-page .logo-title .subtitle {
   font-size: 48px;
-  letter-spacing: -2px;
+  letter-spacing: 0.4px;
+  line-height: 1.67;
   margin-top: 20px;
 }
 
@@ -243,7 +290,7 @@ button i {
 .action-box .action-description {
   width: 340px;
   height: 108px;
-  font-family: ProximaNova;
+  font-family: proxima_novalight;
   font-size: 24px;
   font-weight: 300;
   font-style: normal;
@@ -259,6 +306,7 @@ button i {
   width: 290px;
   height: 60px;
   background-color: #868686;
+  font-family: proxima_novasemibold;
   font-size: 13px;
   font-weight: 600;
   font-style: normal;
@@ -290,6 +338,7 @@ button i {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  margin-bottom: 150px;
 }
 
 .marketplace .description {
@@ -309,7 +358,7 @@ button i {
   font-style: normal;
   font-stretch: normal;
   line-height: 1.56;
-  letter-spacing: -0.2px;
+  letter-spacing: 0.2px;
   color: #ffffff;
 }
 
@@ -342,6 +391,7 @@ button i {
 .our-approach .right-menu ul li {
   width: 100%;
   height: 90px;
+  font-family: proxima_novaregular;
   font-size: 16px;
   padding-left: 130px;
   display: flex;
@@ -351,6 +401,7 @@ button i {
 }
 
 .our-approach .right-menu ul li.selected {
+  font-family: proxima_novasemibold;
   background-color: #ffffff;
   box-shadow: 20px 15px 45px 0 rgba(23, 23, 23, 0.1);
   color: #171717;
@@ -370,11 +421,17 @@ button i {
 
 .approach-content {
   margin-top: 160px;
+  padding-right: 350px;
   width: 800px;
+}
+
+.approach-content .our-approach-title {
+  font-family: proxima_novasemibold;
 }
 
 .approach-content .description {
   height: 144px;
+  font-family: proxima_novalight;
   font-size: 24px;
   margin-top: 56px;
   font-weight: 300;
@@ -401,7 +458,7 @@ button i {
   font-style: normal;
   font-stretch: normal;
   line-height: 1.63;
-  letter-spacing: -0.2px;
+  letter-spacing: 0.2px;
   color: #05050a;
 }
 
@@ -412,7 +469,7 @@ button i {
 .our-team .team-members>span {
   width: 123px;
   height: 20px;
-  font-family: ProximaNova;
+  font-family: proxima_novasemibold;
   font-size: 14px;
   font-weight: 600;
   font-style: normal;
@@ -454,6 +511,7 @@ button i {
 }
 
 .profile .profile-name .full-name {
+  font-family: proxima_novasemibold;
   font-size: 16px;
   font-weight: 600;
   font-style: normal;
@@ -464,6 +522,7 @@ button i {
 }
 
 .profile .profile-name .role {
+  font-family: proxima_novaregular;
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -491,6 +550,7 @@ button i {
 
 .owner-signup .tags li {
   opacity: 0.4;
+  font-family: proxima_novasemibold;
   font-size: 14px;
   font-weight: 600;
   font-style: normal;
@@ -514,11 +574,12 @@ button i {
   font-style: normal;
   font-stretch: normal;
   line-height: 0.95;
-  letter-spacing: -0.6px;
+  letter-spacing: 0.6px;
   color: #ffffff;
 }
 
 .owner-signup .signup-form {
+  font-family: proxima_novaregular;
   margin-top: 30px;
 }
 
@@ -559,6 +620,7 @@ button i {
   width: 250px;
   height: 60px;
   background-color: #171717;
+  font-family: proxima_novasemibold;
   font-size: 13px;
   font-weight: 600;
   font-style: normal;
@@ -597,6 +659,7 @@ button i {
 }
 
 .footer .footer-menu li {
+  font-family: proxima_novasemibold;
   font-size: 14px;
   font-weight: 600;
   font-style: normal;
@@ -809,6 +872,10 @@ button i {
 
   .our-approach {
     display: none;
+  }
+
+  .approach-content {
+    padding-right: 0;
   }
 
   .owner-signup {
@@ -1030,4 +1097,21 @@ button i {
   .our-approach {
     display: none;
   }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-family: proxima_novaregular;
+  color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-family: proxima_novaregular;
+  color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-family: proxima_novaregular;
+  color: #fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-family: proxima_novaregular;
+  color: #fff;
 }
