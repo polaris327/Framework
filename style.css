@@ -367,9 +367,10 @@ button i {
 
 .our-approach {
   width: 100%;
-  height: 710px;
   box-shadow: inset 0 -1px 0 0 #f3f3f3;
   display: flex;
+  align-items: flex-start;
+  position: relative;
 }
 
 .our-approach .left-pane {
@@ -382,9 +383,24 @@ button i {
 
 .our-approach .right-menu {
   width: 100%;
+  height: 710px;
   background-color: #f3f3f3;
   display: flex;
   align-items: center;
+}
+
+.our-approach .right-menu.fixed {
+  position: fixed;
+  width: 849px;
+  top: 140px;
+  right: 0;
+}
+
+.our-approach .right-menu.absolute {
+  position: absolute;
+  width: 849px;
+  right: 0;
+  bottom: 0;
 }
 
 .our-approach .right-menu ul {

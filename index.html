@@ -87,19 +87,35 @@
 
           <div id="our-approach-section" class="our-approach">
             <div class="left-pane">
-              <div class="approach-content">
+              <div class="approach-content scroll-content" id="1">
                 <div class="our-approach-title">OUR APPROACH</div>
+                <div class="title">Increased Liquidity</div>
+                <div class="description">Fractionalizing high unit cost assets and offering them to a global market will increase the potential for liquidity and market depth over time.</div>
+              </div>
+              <div class="approach-content scroll-content" id="2">
                 <div class="title">Digital and Programmable Tokens</div>
                 <div class="description">Increased design space to control how real estate is bought and sold, and how ownership interest can be linked to real world utility and access.</div>
+              </div>
+              <div class="approach-content scroll-content" id="3">
+                <div class="title">Trading & Settlement</div>
+                <div class="description">Unlike traditional settlement, using blockchain shortens the time and lowers the cost of trading and settlement, all in a transparent and auditable fashion.</div>
+              </div>
+              <div class="approach-content scroll-content" id="4">
+                <div class="title">1031 Exchange Alternative</div>
+                <div class="description">An efficient process for real estate owners to 1031 exchange into up to 3 properties on the platform within the 45 day identification period and 180 day closing period. A structured, tax-efficient path to further diversify into other properties on the platform.</div>
+              </div>
+              <div class="approach-content scroll-content" id="5">
+                <div class="title">Automated Taxes and Compliance</div>
+                <div class="description">Smart contract standards that ensure compliance with federal, state and local securities law and tax laws. AML / KYC occur off-chain, but are brought on-chain.</div>
               </div>
             </div>
             <div class="right-menu">
               <ul>
-                <li>Increased Liquidity</li>
-                <li class="selected">Digital and Programmable Tokens</li>
-                <li>Trading & Settlement</li>
-                <li>1031 Exchange Alternative</li>
-                <li>Automated Taxes and Compliance</li>
+                <li class="menu-1">Increased Liquidity</li>
+                <li class="menu-2">Digital and Programmable Tokens</li>
+                <li class="menu-3">Trading & Settlement</li>
+                <li class="menu-4">1031 Exchange Alternative</li>
+                <li class="menu-5">Automated Taxes and Compliance</li>
               </ul>
             </div>
           </div>
@@ -387,6 +403,28 @@
 
       $("#our-team-mobile").click(function() {
         goToByScroll("our-team-section");
+      });
+
+      $(window).on('scroll', function() {
+        var scrollTop = $(window).scrollTop();
+        $('.scroll-content').each(function() {
+            if(scrollTop >= $(this).offset().top - 400) {
+                var id = $(this).attr('id');
+                $('.right-menu li').removeClass('selected');
+                $('.right-menu li.menu-' + id).addClass('selected');
+            }
+        });
+
+        if(scrollTop > 2495 && scrollTop < 4514) {
+          $('.right-menu').removeClass('absolute');
+          $('.right-menu').addClass('fixed');
+        } else if(scrollTop > 4513 && scrollTop < 5197) {
+          $('.right-menu').removeClass('fixed');
+          $('.right-menu').addClass('absolute');
+        } else {
+          $('.right-menu').removeClass('fixed');
+          $('.right-menu').removeClass('absolute');
+        }
       });
 
       // $(".menu-item").click(function(e) {
