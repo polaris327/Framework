@@ -825,14 +825,23 @@ button i {
     background-color: #171717;
   }
 
+  .our-approach-mobile .our-approach-title-mobile {
+    text-align: center;
+    font-family: proxima_novasemibold;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.6px;
+    color: #171717;
+  }
+
   .our-approach-mobile .carousel-inner {
     height: 100%;
     width: 100%;
   }
 
   .our-approach-mobile .carousel-inner .item {
-    display: flex;
-    justify-content: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
     height: 100%;
   }
 
@@ -842,6 +851,7 @@ button i {
     text-align: center;
     margin-top: 0;
     padding-right: 0;
+    margin: auto;
   }
 
   .our-approach-mobile .carousel-inner .item .approach-content .title {
@@ -849,10 +859,10 @@ button i {
     margin-top: 40px;
   }
 
-  .our-approach-mobile .carousel img {
+  /*.our-approach-mobile .carousel img {
     height: 100%;
     width: 100%;
-  }
+  }*/
 
   .our-team {
     display: flex;
