@@ -56,18 +56,21 @@ button i {
 }
 
 .main-menu {
+  display: flex;
+  flex-direction: column;
   width: 100px;
   background-color: #f3f3f3;
   position: fixed;
+  height: 100vh;
 }
 
 .main-menu .nav-menu {
-  height: 788px;
   background-color: #171717;
   color: white;
   display: flex;
   align-items: center;
   flex-direction: column;
+  flex: 1;
 }
 
 .main-menu .nav-menu ul {
