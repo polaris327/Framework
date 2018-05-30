@@ -87,8 +87,8 @@
 
           <div id="our-approach-section" class="our-approach">
             <div class="left-pane">
-              <div class="approach-content scroll-content" id="1">
-                <div class="our-approach-title">OUR APPROACH</div>
+              <div class="our-approach-title">OUR APPROACH</div>
+              <div class="approach-content scroll-content active" id="1">
                 <div class="title">Increased Liquidity</div>
                 <div class="description">Fractionalizing high unit cost assets and offering them to a global market will increase the potential for liquidity and market depth over time.</div>
               </div>
@@ -111,11 +111,11 @@
             </div>
             <div class="right-menu">
               <ul>
-                <li class="menu-1">Increased Liquidity</li>
-                <li class="menu-2">Digital and Programmable Tokens</li>
-                <li class="menu-3">Trading & Settlement</li>
-                <li class="menu-4">1031 Exchange Alternative</li>
-                <li class="menu-5">Automated Taxes and Compliance</li>
+                <li class="menu-1 selected">Increased Liquidity</li>
+                <li class="menu-2 ">Digital and Programmable Tokens</li>
+                <li class="menu-3 ">Trading & Settlement</li>
+                <li class="menu-4 ">1031 Exchange Alternative</li>
+                <li class="menu-5 ">Automated Taxes and Compliance</li>
               </ul>
             </div>
           </div>
@@ -428,27 +428,37 @@
         goToByScroll("our-team-section");
       });
 
-      $(window).on('scroll', function() {
-        var scrollTop = $(window).scrollTop();
-        $('.scroll-content').each(function() {
-            if(scrollTop >= $(this).offset().top - 400) {
-                var id = $(this).attr('id');
-                $('.right-menu li').removeClass('selected');
-                $('.right-menu li.menu-' + id).addClass('selected');
-            }
+      $('.scroll-content').each(function() {
+        var id = $(this).attr('id');
+        $('.right-menu li.menu-' + id).click(function(){
+          $('.scroll-content').css('display', 'none');
+          $('#' + id).fadeIn(1000);
+          $('.right-menu li').removeClass('selected');
+          $(this).addClass('selected');
         });
-
-        if(scrollTop > 2495 && scrollTop < 4514) {
-          $('.right-menu').removeClass('absolute');
-          $('.right-menu').addClass('fixed');
-        } else if(scrollTop > 4513 && scrollTop < 5197) {
-          $('.right-menu').removeClass('fixed');
-          $('.right-menu').addClass('absolute');
-        } else {
-          $('.right-menu').removeClass('fixed');
-          $('.right-menu').removeClass('absolute');
-        }
       });
+
+      // $(window).on('scroll', function() {
+      //   var scrollTop = $(window).scrollTop();
+      //   $('.scroll-content').each(function() {
+      //       if(scrollTop >= $(this).offset().top - 400) {
+      //           var id = $(this).attr('id');
+      //           $('.right-menu li').removeClass('selected');
+      //           $('.right-menu li.menu-' + id).addClass('selected');
+      //       }
+      //   });
+
+      //   if(scrollTop > 2495 && scrollTop < 4514) {
+      //     $('.right-menu').removeClass('absolute');
+      //     $('.right-menu').addClass('fixed');
+      //   } else if(scrollTop > 4513 && scrollTop < 5197) {
+      //     $('.right-menu').removeClass('fixed');
+      //     $('.right-menu').addClass('absolute');
+      //   } else {
+      //     $('.right-menu').removeClass('fixed');
+      //     $('.right-menu').removeClass('absolute');
+      //   }
+      // });
 
       // $(".menu-item").click(function(e) {
       //   for(object in $(".menu-item")) {

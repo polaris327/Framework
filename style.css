@@ -273,6 +273,7 @@ button i {
   margin-right: 30px;
   box-shadow: 0 50px 80px 0 rgba(23, 23, 23, 0.1);
   border-top: 1px solid #d1d1d1;
+  border: solid 0.5px #f3f3f3;
 }
 
 .action-box .action-title {
@@ -287,7 +288,6 @@ button i {
   letter-spacing: -0.2px;
   text-align: center;
   color: #05050a;
-  margin-top: 120px;
 }
 
 .action-box .action-description {
@@ -308,7 +308,7 @@ button i {
 .action-box .action-button {
   width: 290px;
   height: 60px;
-  background-color: #868686;
+  background-color: #171717;
   font-family: proxima_novasemibold;
   font-size: 13px;
   font-weight: 600;
@@ -326,11 +326,11 @@ button i {
 .action-box:hover {
   cursor: pointer;
   border-top: 1px solid #868686;
+  box-shadow: unset;
 }
 
 .action-box:hover .action-button {
-  background-color: #171717;
-
+  background-color: #868686;
 }
 
 .marketplace {
@@ -379,6 +379,14 @@ button i {
   display: flex;
   /* align-items: center; */
   flex-direction: column;
+}
+
+.our-approach .left-pane .scroll-content {
+  display: none;
+}
+
+.our-approach .left-pane .scroll-content.active {
+  display: block;
 }
 
 .our-approach .right-menu {
@@ -439,13 +447,13 @@ button i {
 }
 
 .approach-content {
-  margin-top: 160px;
   padding-right: 350px;
   width: 800px;
 }
 
-.approach-content .our-approach-title {
+.our-approach .our-approach-title {
   font-family: proxima_novasemibold;
+  margin-top: 165px;
 }
 
 .approach-content .description {
@@ -622,7 +630,7 @@ button i {
 }
 
 .owner-signup .signup-form .form-row input {
-  width: 470px;
+  width: 50%;
   height: 50px;
   margin-right: 130px;
   border: none;
@@ -633,7 +641,7 @@ button i {
 }
 
 .owner-signup .signup-form .form-row textarea {
-  width: 470px;
+  width: 50%;
   height: 100px;
   margin-right: 130px;
   border: none;
@@ -644,7 +652,7 @@ button i {
 }
 
 .owner-signup .signup-form .form-row .submit-button {
-  width: 470px;
+  width: 50%;
   margin-right: 130px;
 }
 
@@ -848,10 +856,13 @@ button i {
 
   .our-approach-mobile .carousel .carousel-indicators li {
     background-color: rgba(23, 23, 23, 0.1);
+    margin: 6px;
   }
 
   .our-approach-mobile .carousel .carousel-indicators li.active {
     background-color: #171717;
+    width: 10px;
+    height: 10px;
   }
 
   .our-approach-mobile .our-approach-title-mobile {
@@ -1075,6 +1086,10 @@ button i {
     margin-bottom: 0;
   }
 
+  .our-approach-mobile .carousel-indicators {
+    bottom: -20px;
+  }
+
   .our-approach-mobile .carousel-inner .item .approach-content {
     width: 300px;
   }
@@ -1126,6 +1141,7 @@ button i {
     left: unset;
     margin-left: unset;
     text-align: left;
+    bottom: -20px;
   }
 
   .owner-signup {
