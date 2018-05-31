@@ -791,6 +791,10 @@ button i {
     display: none;
   }
 
+  .landing-page video {
+    object-fit: cover;
+  }
+  
   .landing-page .mobile-menu-icon {
     position: absolute;
     top: 50px;
@@ -1142,10 +1146,6 @@ button i {
 @media screen and (max-width: 414px) {
   .landing-page {
     height: 760px;
-  }
-
-  .landing-page video {
-    /* object-fit: cover; */
   }
 
   .landing-page .trusted-title {
