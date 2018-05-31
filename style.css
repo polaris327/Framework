@@ -262,8 +262,9 @@ button i {
 }
 
 .signup-page .action-box {
+  padding: 0 140px;
   margin-top: 120px;
-  width: 570px;
+  width: 40%;
   min-height: 560px;
   display: flex;
   flex-direction: column;
@@ -291,7 +292,7 @@ button i {
 }
 
 .action-box .action-description {
-  width: 340px;
+  /* width: 340px; */
   height: 108px;
   font-family: proxima_novalight;
   font-size: 24px;
@@ -512,21 +513,21 @@ button i {
   flex-wrap: wrap;
 }
 
-.our-team .team-members .profiles-mobile {
+.profiles-mobile {
   display: none;
 }
 
 .our-team .team-members .profiles .profile {
-  width: 270px;
+  width: 200px;
   height: 520px;
   margin-top: 60px;
-  margin-right: 30px;
+  margin-right: 43px;
   position: relative;
 }
 
 
 .our-team .team-members .profiles .profile .team-members-grey-bg {
-  width: 166%;
+  width: 1000%;
   height: 400px;
   background: #f3f3f3;
   position: absolute;
@@ -536,7 +537,7 @@ button i {
 }
 
 .profile img {
-  width: 270px;
+  width: 200px;
   height: 400px;
   background-color: #d2d2d2;
   /* margin-right: 30px; */
@@ -822,6 +823,8 @@ button i {
   }
 
   .signup-page .action-box {
+    width: 570px;
+    max-width: 100%;
     margin-right: 0;
     margin-bottom: 40px;
     margin-top: 0;
@@ -830,6 +833,10 @@ button i {
 
   .action-box .action-title {
     margin-top: 0px;
+  }
+
+  .action-box .action-description {
+    width: 340px;
   }
 
   .marketplace {
@@ -919,11 +926,11 @@ button i {
   .profiles {
     flex-wrap: wrap;
     justify-content: space-between;
+    overflow: hidden;
   }
 
   .our-team .team-members {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-right: 509px;
   }
 
   .our-team .team-members .profiles .profile {
@@ -931,13 +938,78 @@ button i {
   }
 
   .our-team .team-members .profiles .profile .team-members-grey-bg {
-    width: 133%;
+    width: 1000%;
+    /* width: 133%; */
   }
 
   .our-approach {
     display: none;
   }
 
+  .our-team .team-members .profiles {
+    display: none;
+  }
+
+  .profiles-mobile {
+    display: block;
+    position: relative;
+    margin-left: 70px;
+  }
+
+  .profiles-mobile .slider1 .slick-dots {
+    text-align: left;
+    bottom: -60px;
+  }
+
+  .profiles-mobile .slider1 .slick-list .slick-slide {
+    width: 243px;
+  }
+
+  .profiles-mobile .slider1 .slick-dots li button:before {
+    font-size: 9px;
+  }
+
+  .profiles-mobile .team-members-grey-bg {
+      /* width: 120%; */
+      height: 400px;
+      background: #f3f3f3;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+  }
+
+  .profiles-mobile {
+    margin-top: 50px;
+  }
+
+  .profiles-mobile .carousel .carousel-indicators li {
+    background-color: rgba(23, 23, 23, 0.1);
+  }
+
+  .profiles-mobile .profile {
+    width: 270px;
+  }
+
+  .profiles-mobile .carousel {
+    height: 600px;
+  }
+
+  .profiles-mobile .carousel .carousel-indicators li.active {
+    background-color: #171717;
+  }
+
+  .profiles-mobile .carousel-inner .item .approach-content {
+    width: 300px;
+  }
+
+  .profiles-mobile .carousel-indicators {
+    left: unset;
+    margin-left: unset;
+    text-align: left;
+    bottom: -20px;
+  }
+    
   .owner-signup {
     margin-bottom: 0;
     height: auto;
@@ -1077,7 +1149,7 @@ button i {
 
   .our-team .team-members {
     margin-left: 0;
-    margin-right: 0;
+    margin-right: 193px;
     margin-top: 100px;
   }
 
@@ -1093,8 +1165,15 @@ button i {
   .our-approach-mobile .carousel-inner .item .approach-content {
     width: 300px;
   }
+  
+  .profiles-mobile {
+    margin-left: 30px;
+  }
 
-  .our-team .team-members .profiles {
+  .profiles-mobile .slider1 .slick-list {
+    padding: 0 20% 0 0 !important;
+  }
+  /* .our-team .team-members .profiles {
     display: none;
   }
 
@@ -1104,7 +1183,7 @@ button i {
   }
 
   .our-team .team-members .profiles-mobile .team-members-grey-bg {
-      width: 120%;
+      width: calc(100vw - 1243px);
       height: 400px;
       background: #f3f3f3;
       position: absolute;
@@ -1142,7 +1221,7 @@ button i {
     margin-left: unset;
     text-align: left;
     bottom: -20px;
-  }
+  } */
 
   .owner-signup {
     padding: 100px 30px;
