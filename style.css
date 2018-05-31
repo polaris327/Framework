@@ -755,7 +755,6 @@ button i {
 
 .footer .footer-logo {
   width: 184px;
-  height: 14px;
 }
 
 .footer .footer-menu {
@@ -776,6 +775,10 @@ button i {
   margin-right: 50px;
   cursor: pointer;
   opacity: 0.4;
+}
+
+.footer .footer-menu li:hover {
+  opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
