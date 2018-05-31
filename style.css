@@ -246,10 +246,12 @@ button i {
 }
 
 .landing-page .logo-title .subtitle {
-  font-size: 48px;
+  font-family: proxima_novaregular;
+  font-size: 38px;
   letter-spacing: 0.4px;
-  line-height: 1.67;
-  margin-top: 20px;
+  line-height: 1.58;
+  margin-top: 30px;
+  text-align: center;
 }
 
 .main-content {
@@ -643,6 +645,12 @@ button i {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 16px;
   color: white;
+}
+
+.owner-signup .signup-form .form-row input:focus, 
+.owner-signup .signup-form .form-row textarea:focus {
+  outline: unset;
+  border-bottom-color: rgba(255, 255, 255, 0.8);
 }
 
 .owner-signup .signup-form .form-row textarea {
