@@ -15,27 +15,22 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     </head>
   <body>
-    <div id="container" class="container">
-      <div class="main-menu">
-        <div class="nav-menu">
-          <img class="logo-image" src="assets/Symbol@2x.png" alt="main_logo">
-          <ul>
-            <li><a id="signup" class="menu-item">SIGN UP</a></li>
-            <li><a id="our-approach" class="menu-item">OUR APPROACH</a></li>
-            <li><a id="our-team" class="menu-item">OUR TEAM</a></li>
-          </ul>
-        </div>
-        <div class="contact-us">
-          <div class="text">CONTACT US</div>
-        </div>
+    <div class="main-menu">
+      <img class="logo-image" src="assets/Logotype@2x.png" alt="main_logo">
+      <div class="nav-menu">
+        <a id="our-clients" class="menu-item">OUR CLIENTS</a>
+        <a id="our-approach" class="menu-item">OUR APPROACH</a>
+        <a id="our-team" class="menu-item">OUR TEAM</a>
+        <a id="contact" class="menu-item">CONTACT</a>
       </div>
+    </div>
+    <div id="container" class="container">
       <div class="main-container">
         <div class="landing-page">
           <video width="320" height="240" autoplay loop>
             <source src="assets/FrameWork Hero.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video>
-          <img class="main-logo" src="assets/Logotype@2x.png" alt="main-logo">
           <div class="logo-title">
             <div class="trusted-title">TRUSTED ADVISTORS</div>
             <div>The Global Real Estate Marketplace.</div>
@@ -334,6 +329,20 @@
     </div>
     
     <script>
+      $(window).on('scroll', function() {
+        var scrollTop = $(window).scrollTop();
+        
+        if(scrollTop > 200) {
+          $('.main-menu .logo-image').attr('src', 'assets/Logotype_Inverted@2x.png');
+          $('.main-menu').addClass('scrolled');
+          $('.main-menu .nav-menu .menu-item').addClass('scrolled');
+        } else {
+          $('.main-menu .logo-image').attr('src', 'assets/Logotype@2x.png');
+          $('.main-menu').removeClass('scrolled');
+          $('.main-menu .nav-menu .menu-item').removeClass('scrolled');
+        }
+      });
+
       $("#menu_icon").click(function() {
         if ($("#mobile-menu").css('display') === 'none') {
           $("#mobile-menu").css('display', 'block');
