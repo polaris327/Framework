@@ -54,14 +54,14 @@
         </div>
 
         <div class="main-content">
-          <div class="signup-page">
+          <div id="our-clients-section" class="signup-page">
             <div class="action-box">
               <div class="action-title">Asset Owners and REITs</div>
               <div class="action-description">
                   Offer your property or fund direct
                   to global investors in our liquid real estate marketplace.
               </div>
-              <button class="action-button">
+              <button id="asset-owner-sign-up-button" class="action-button">
                 ASSET OWNER SIGN-UP
                 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
               </button>
@@ -71,7 +71,7 @@
                 <div class="action-description">
                     Gain access to high quality real estate assets at any investment level.
                 </div>
-                <button class="action-button">
+                <button id="investor-sign-up-button" class="action-button">
                   INVESTOR SIGN-UP
                   <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                 </button>
@@ -291,29 +291,53 @@
 
           <div id="owner-signup" class="owner-signup">
             <ul class="tags">
-              <li class="selected">ASSET OWNERS AND REITs</li>
-              <li>INVESTORS</li>
+              <li id="asset-owners-form-tab" class="selected">ASSET OWNERS AND REITs</li>
+              <li id="investors-form-tab">INVESTORS</li>
             </ul>
-            <div class="signup-title">Asset Owners Sign Up</div>
-            <form class="signup-form">
-              <div class="form-row">
-                <input type="text" placeholder="First Name" />
-                <input type="tel" placeholder="Phone Number" />
-              </div>
-              <div class="form-row">
-                <input type="text" placeholder="Last Name" />
-                <input type="email" placeholder="Email Address" />
-              </div>
-              <div class="form-row">
-                <textarea placeholder="Notes" ></textarea>
-                <div class="submit-button">
-                  <button>
-                    SUBMIT FORM
-                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                  </button>
+            <div id="asset-owners-form">
+              <div class="signup-title">Asset Owners Sign Up</div>
+              <form class="signup-form">
+                <div class="form-row">
+                  <input type="text" placeholder="First Name" />
+                  <input type="tel" placeholder="Phone Number" />
                 </div>
-              </div>
-            </form>
+                <div class="form-row">
+                  <input type="text" placeholder="Last Name" />
+                  <input type="email" placeholder="Email Address" />
+                </div>
+                <div class="form-row">
+                  <textarea placeholder="Notes" ></textarea>
+                  <div class="submit-button">
+                    <button>
+                      SUBMIT FORM
+                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div id="investors-form" style="display: none;">
+              <div class="signup-title">Investors Sign Up</div>
+              <form class="signup-form">
+                <div class="form-row">
+                  <input type="text" placeholder="First Name" />
+                  <input type="tel" placeholder="Phone Number" />
+                </div>
+                <div class="form-row">
+                  <input type="text" placeholder="Last Name" />
+                  <input type="email" placeholder="Email Address" />
+                </div>
+                <div class="form-row">
+                  <textarea placeholder="Notes" ></textarea>
+                  <div class="submit-button">
+                    <button>
+                      SUBMIT FORM
+                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>            
           </div>
         </div>
       </div>
@@ -391,6 +415,14 @@
       //   });
       // }
 
+      $("#our-clients").click(function() {
+        goToByScroll("our-clients-section");
+      });
+
+      $("#contact").click(function() {
+        goToByScroll("owner-signup");
+      });
+
       $("#our-approach").click(function() {
         goToByScroll("our-approach-section");
       });
@@ -421,6 +453,30 @@
 
       $("#our-team-mobile").click(function() {
         goToByScroll("our-team-section");
+      });
+      
+      $("#asset-owner-sign-up-button").click(function() {
+        goToByScroll("owner-signup");
+        $("#owner-signup .tags #asset-owners-form-tab").click();
+      });
+
+      $("#investor-sign-up-button").click(function() {
+        goToByScroll("owner-signup");
+        $("#owner-signup .tags #investors-form-tab").click();
+      });
+
+      $("#owner-signup .tags #asset-owners-form-tab").click(function() {
+        $('#owner-signup .tags #asset-owners-form-tab').addClass('selected');
+        $('#owner-signup .tags #investors-form-tab').removeClass('selected');
+        $("#asset-owners-form").css('display', 'block');
+        $("#investors-form").css('display', 'none');
+      });
+
+      $("#owner-signup .tags #investors-form-tab").click(function() {
+        $('#owner-signup .tags #asset-owners-form-tab').removeClass('selected');
+        $('#owner-signup .tags #investors-form-tab').addClass('selected');
+        $("#asset-owners-form").css('display', 'none');
+        $("#investors-form").css('display', 'block');
       });
 
       $('.scroll-content').each(function() {
