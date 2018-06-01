@@ -1344,17 +1344,15 @@ button i {
     text-align: center;
     padding: 0 15px;
   }
+
+  .footer .footer-menu {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1140px) {
   .our-approach {
     display: none;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .footer .footer-menu {
-    width: 100%;
   }
 }
 
