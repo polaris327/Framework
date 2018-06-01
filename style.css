@@ -391,6 +391,8 @@ button i {
   justify-content: flex-end;
   align-items: flex-end;
   margin-bottom: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .marketplace .description {
