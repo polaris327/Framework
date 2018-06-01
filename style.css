@@ -306,6 +306,7 @@ button i {
 .signup-page {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .signup-page .action-box {
